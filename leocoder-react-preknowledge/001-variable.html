@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  /**
+   *
+   * @type {number}
+   *
+   * var变量没有作用域
+   *
+   * let 表示声明变量
+   * const 也是，但是const 最好表示声明不变的变量，比如常量
+   */
+
+  for(var i=0; i<4; i++){
+    // 随便写点什么
+    console.log('xxxxxxxxx')
+  }
+  console.log(i); // 输出 4
+
+  if(true){
+    let number = 10;
+  }
+  console.log(number); // 输出10
+
+  let a = 20
+
+  console.log(a);
+
+  const b = 8
+  // b = 9
+  console.log(b);
+
+  const obj= {
+    name: 'leocoder',
+    age: 18
+  }
+
+  obj.age = 20
+  console.log(obj);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>对象解构</title>
+</head>
+<body>
+<script>
+    /**
+     * 解构赋值和展开 代码示例
+     */
+    let a, b;
+    ({a, b} = {a: 10, b: 20}); //属性a赋值给变量a，属性b赋值给变量b
+    console.log(a); // 10
+    console.log(b); // 20
+
+    const { c, d } = { c: 90, d: 100 };
+    console.log(c); // 90
+    console.log(d); // 100
+
+    ({a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}); //属性a赋值给变量a，属性b赋值给变量b，其余的保存到rest中
+    console.log(a); // 10
+    console.log(b); // 20
+    console.log(rest); // {c: 30, d: 40}
+
+    ({a = 10, b = 5} = {a: 3}); // 可以指定默认值
+    console.log(a); // 3
+    console.log(b); // 5
+
+    const {name, age} = {name: '孙悟空', age: 18}; // 对象解构时如果使用const、let、var开头，可以不加()
+    console.log(name); // 孙悟空
+    console.log(age); // 18
+
+    const {len: width} = {len: 100}; // 将对象的len属性值赋值给变量width
+    console.log(width); // 100
+
+    const {inner: {size}} = {a: 10, b: 20, inner: {size: 5}}; // 将对象中inner.size赋值给变量size
+    console.log(size) // 5
+
+    const {inner: {size: mySize}} = {a: 10, b: 20, inner: {size: 5}}; // 将对象中inner.size赋值给变量mySize
+    console.log(mySize); // 5
+
+</script>
+</body>
+</html>`

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta/>
+    <meta/>
+    <meta/>
+    <title>Document</title>
+</head>
+<body>
+<!-- 引入React相关的js库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+
+<div id="myContainer"></div>
+
+<!-- 注意，这一行的 type 是写 "text/babel"，而不是 "text/javascript" -->
+<script type="text/babel">
+
+    //1、创建虚拟DOM对象
+    var vDom = <div>Hello, React!</div>; // 不是字符串, 不能加引号
+
+    //2、渲染虚拟DOM对象（将虚拟DOM对象渲染到页面元素中）
+
+    const root = ReactDOM.createRoot(document.querySelector('#myContainer'));
+    root.render(vDom);
+</script>
+</body>
+</html>

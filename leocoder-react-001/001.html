@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta/>
+  <meta/>
+  <meta/>
+  <title>Document</title>
+</head>
+<style>
+  .title{
+    background-color: #4288a8;
+    width: 200px;
+  }
+</style>
+<body>
+<!-- 引入React相关的js库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+
+<!-- 准备好一个“容器” -->
+<div id="test"></div>
+
+<script type="text/babel" >
+  const myId = 'aTgUiGu'
+  const myData = 'HeLlo,rEaCt'
+
+  //1.创建虚拟DOM
+  const VDOM = (
+          <div>
+            <h2 className="title" id={myId.toLowerCase()}>
+              <span style={{color:'white',fontSize:'29px'}}>{myData.toLowerCase()}</span>
+            </h2>
+            <h2 className="title" id={myId.toLowerCase()}>
+              <span style={{color:'white',fontSize:'29px'}}>{myData.toUpperCase()}</span>
+            </h2>
+            <input type="text"/>
+          </div>
+  )
+  //2.渲染虚拟DOM到页面
+  ReactDOM.render(VDOM,document.getElementById('test'))
+</script>
+</body>
+</html>

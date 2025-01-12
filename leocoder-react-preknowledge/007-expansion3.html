@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>展开</title>
+</head>
+<body>
+<script>
+    const user = {
+        name: 'Leo',
+        age: 25,
+    };
+
+    const hobbies = ['coding', 'reading'];
+
+    // 使用展开运算符
+    const newUser = { ...user, job: 'developer' };
+    console.log(newUser); // { name: 'Leo', age: 25, job: 'developer' }
+
+    // 合并数组
+    const newHobbies = [...hobbies, 'traveling'];
+    console.log(newHobbies); // ['coding', 'reading', 'traveling']
+
+    // 函数参数
+    function introduce(name, age, job) {
+        console.log(`Hi, I am ${name}. I am ${age} years old and I work as a ${job}.`);
+    }
+
+    introduce(...Object.values(newUser));
+    // Hi, I am Leo. I am 25 years old and I work as a developer.
+</script>
+</body>
+</html>

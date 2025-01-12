@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>展开</title>
+</head>
+<body>
+<script>
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+
+    // 使用展开运算符将两个数组合并
+    const combined = [...arr1, ...arr2];
+    console.log(combined); // [1, 2, 3, 4, 5, 6]
+
+    // 在数组中插入值
+    const arrWithInsert = [0, ...arr1, 7];
+    console.log(arrWithInsert); // [0, 1, 2, 3, 7]
+
+
+    const arr3 = [1, 2, 3];
+    const arr4 = [4, 5, 6];
+
+    // 使用 concat
+    const combined1 = arr3.concat(arr4);
+    console.log(combined1); // [1, 2, 3, 4, 5, 6]
+
+    // 使用展开运算符
+    const combined2 = [...arr3, ...arr4];
+    console.log(combined2); // [1, 2, 3, 4, 5, 6]
+
+    const user = {
+        name: 'Leo',
+        age: 25,
+    };
+
+    // 添加新属性
+    const updatedUser = { ...user, job: 'developer' };
+    console.log(updatedUser); // { name: 'Leo', age: 25, job: 'developer' }
+
+    // 修改已有属性
+    const modifiedUser = { ...user, age: 30 };
+    console.log(modifiedUser); // { name: 'Leo', age: 30 }
+
+    // 函数中的展开
+    function sum(x, y, z) {
+        return x + y + z;
+    }
+
+    const numbers = [1, 2, 3];
+
+    // 将数组展开为单独的值传入
+    console.log(sum(...numbers)); // 6
+    console.log(numbers[0] + numbers[1] + numbers[2]);
+</script>
+</body>
+</html>

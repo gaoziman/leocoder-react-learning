@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>数组的其他方法</title>
+</head>
+<body>
+<script>
+
+
+    const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+    const result = words.filter(word => word.length > 6);
+    const res = words.filter(word => word.startsWith('e'))
+    console.log(res);
+    // expected output: Array ["exuberant", "destruction", "present"]
+</script>
+</body>
+</html>

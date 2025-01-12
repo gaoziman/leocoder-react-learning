@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>初识 JSX</title>
+</head>
+<!-- 引入React相关的js库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+<body>
+<div id="root">
+
+
+</div>
+
+
+<script type="text/babel">
+    // 命令式编程
+    // 创建一个React组件
+    React.createElement("button",{},"我是一个按钮")
+
+
+    // 声明式编程
+    const button = <button>我是一个按钮</button>
+
+    const  root = ReactDOM.createRoot(document.getElementById('root')).render(button);
+
+    root.render(button)
+</script>
+</body>
+</html>

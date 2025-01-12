@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>结构和展开</title>
+</head>
+<body>
+<script>
+    /**
+     * 解构赋值 代码示例
+     */
+    let a, b, rest;
+
+    [a, b] = [10, 40]; //此时a=10 b=40
+    console.log(a);
+    console.log(b);
+
+    [a, , b] = [10, 20, 30]; // 第一个元素给a，第三个元素给b，中间空出一个
+    console.log(a); // 10
+    console.log(b); // 30
+
+
+    [a, b, ...rest] = [10, 20, 30, 40, 50]; // 第一个元素给a，第二个元素给b，剩下的给rest
+    console.log(a); // 10
+    console.log(b); // 20
+    console.log(rest); // [30, 40, 50]
+
+    const [d, e, f] = [40, 50, 60] // 可以在赋值时直接声明变量
+    console.log(d); // 40
+    console.log(e); // 50
+    console.log(f); // 60
+
+    [a = 5, b = 7] = [1]; // 赋值是可以指定默认值
+    console.log(a); // 1
+    console.log(b); // 7
+
+</script>
+</body>
+</html>

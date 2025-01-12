@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>JSX渲染列表</title>
+</head>
+<!-- 引入React相关的js库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+<body>
+<div id="root">
+
+
+</div>
+
+
+<script type="text/babel">
+    // 命令式编程
+    // 创建一个React组件
+    React.createElement("button", {}, "我是一个按钮")
+
+
+    const data = ['孙悟空', '猪八戒', '沙和尚'];
+
+    // 声明式编程
+    const list = data.map(item => <li>{item}</li>)
+
+    const root = ReactDOM.createRoot(document.getElementById('root')).render(list);
+
+    root.render(button)
+</script>
+</body>
+</html>

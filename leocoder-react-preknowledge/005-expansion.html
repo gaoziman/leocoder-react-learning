@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>展开</title>
+</head>
+<body>
+<script>
+    function fn(x, y, z) {
+        console.log('x =', x);
+        console.log('y =', y);
+        console.log('z =', z);
+    }
+
+    const numbers = [1, 2, 3];
+
+    fn(...numbers);
+
+    /*
+      输出：
+        x = 1
+        y = 2
+        z = 3
+    */
+
+    function myFunction(v, w, x, y, z) {
+    }
+
+    let args = [0, 1];
+    myFunction(-1, ...args, 2, ...[3]);
+
+    const arr = [0, 1, 2];
+    const newArr = [...arr, 12];
+    console.log(newArr); // [0, 1, 2, 12]
+
+    let parts = ['shoulders', 'knees'];
+    let lyrics = ['head', ...parts, 'and', 'toes'];
+    //  ["head", "shoulders", "knees", "and", "toes"]
+    let arr1 = [0, 1, 2];
+    let arr2 = [3, 4, 5];
+
+    arr1 = [...arr1, ...arr2];
+    let obj1 = {name: '孙悟空', age: 18};
+    let obj2 = {name: '猪八戒', address: '高老庄'};
+    let clonedObj = {...obj1}; // 浅拷贝对象
+    // Object { name: '孙悟空', age: 18 }
+    let mergedObj = {...obj1, ...obj2}; // 合并两个对象
+    // Object {name: '猪八戒', age: 18, address: '高老庄'}
+</script>
+</body>
+</html>

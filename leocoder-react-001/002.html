@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+</head>
+<body>
+<!-- 引入React相关的js库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+
+<!-- 准备好一个“容器” -->
+<div id="test2"></div>
+
+<script type="text/babel" >
+  var arr = [
+    <h1>leocoder</h1>,
+    <h2>一起写代码</h2>,
+  ];
+  ReactDOM.render(
+          <div>{arr}</div>,
+          document.getElementById('test2')
+  );
+</script>
+</body>
+</html>

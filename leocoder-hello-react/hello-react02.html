@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+<!-- 引入React相关的js库 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.development.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.21.4/babel.min.js"></script>
+
+<div id="root"></div>
+
+<script>
+    const button = React.createElement('button', {
+        onClick: (e) => {
+            alert('你点了按钮！');
+            e.stopPropagation();
+        }
+    }, '我是一个按钮');
+
+      const box = React.createElement('div', {
+          onClick: (e) => {
+              alert('你点了div！');
+              console.log(e);
+          }
+      }, '我是一个div', button);
+
+    const root = ReactDOM.createRoot(document.querySelector('#root'));
+
+    root.render(box);
+
+</script>
+</body>
+</html>
